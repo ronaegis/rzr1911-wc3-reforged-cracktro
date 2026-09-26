@@ -49,7 +49,22 @@ Asset URLs are relative, so hosting below a repository path is supported.
 Serve `.wasm` files as `application/wasm` and `.js` files as JavaScript.
 
 The GitHub Actions workflow builds, runs unit and Rust tests, and uploads a
-`static-site` artifact. It does not deploy or publish anything automatically.
+`static-site` artifact. Successful default-branch builds also deploy `dist/`
+to GitHub Pages. Pull requests and other branches only build and test.
+
+### GitHub Pages setup
+
+1. In the GitHub repository, open **Settings → Pages**.
+2. Under **Build and deployment**, set **Source** to **GitHub Actions**.
+3. Push the workflow to the default branch, or run **Build, test and deploy
+   Pages** manually from the **Actions** tab with the default branch selected.
+4. Wait for both `check` and `deploy` to succeed. The deployment job reports
+   the published URL.
+
+For this repository the project site is
+https://ronaegis.github.io/rzr1911-wc3-reforged-cracktro/.
+No personal access token or SSH secret is needed by the workflow; it uses
+GitHub's built-in token. See [GitHub's custom workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
 
 ## Validation
 
