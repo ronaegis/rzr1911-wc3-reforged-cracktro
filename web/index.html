@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  <title>RZR D Cracktro 03 — Warcraft III Reforged</title>
+  <style>
+    html, body { margin: 0; height: 100%; background: #000; color: #c8c8c8; font: 14px/1.4 ui-monospace, Consolas, monospace; }
+    canvas { display: block; width: 100vw; height: 100vh; }
+    #status { position: fixed; left: 12px; bottom: 10px; right: 12px; pointer-events: none; white-space: pre-wrap; text-shadow: 0 1px 2px #000; }
+    #controls { position: fixed; top: 12px; right: 12px; display: flex; gap: 8px; }
+    button { color: #ddd; background: #111d; border: 1px solid #777; padding: 8px 12px; cursor: pointer; font: inherit; }
+    button:disabled { opacity: .5; cursor: wait; }
+    #controls { align-items: center; flex-wrap: wrap; }
+    select { color: #ddd; background: #111; border: 1px solid #777; padding: 8px; font: inherit; }
+    #controls label { text-shadow: 0 1px 2px #000; }
+    #start-screen { position: fixed; inset: 0; display: grid; place-items: center; background: #000b; }
+    #start-screen[hidden] { display: none; }
+    #start { font-size: 20px; padding: 16px 28px; }
+  </style>
+</head>
+<body>
+  <canvas id="view" width="1024" height="576"></canvas>
+  <div id="start-screen"><button id="start" disabled>Loading demo…</button></div>
+  <div id="status">loading</div>
+  <div id="controls">
+    <label for="resolution">Resolution</label>
+    <select id="resolution">
+      <option value="512">Low · 512×288</option>
+      <option value="1024" selected>Mid · 1024×576</option>
+      <option value="2048">High · 2048×1152</option>
+    </select>
+    <button id="sound" disabled>Enable sound</button><button id="replay" disabled>Replay</button>
+  </div>
+  <script type="module" src="./player.js"></script>
+</body>
+</html>

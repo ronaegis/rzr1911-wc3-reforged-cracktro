@@ -1,0 +1,73 @@
+shader_01_0x250C0 size=928 ver=0x00010050 type=vs 5.0 entry='<pre><body bgcolor="#000000"><font color = "#a0a0a0">//'
+shader_02_0x17FF60 size=14456 ver=0x00050050 type=cs 5.0 entry='<pre><body bgcolor="#000000"><font color = "#a0a0a0">//'
+   cb ContextBuffer size=1024 vars=119
+   cb bufferUAV size=16 vars=1
+   res bufferUAV type=6 bind=0 count=1
+   res ContextBuffer type=0 bind=8 count=1
+shader_03_0x183B80 size=7372 ver=0x00000050 type=ps 5.0 entry='<pre><body bgcolor="#000000"><font color = "#a0a0a0">//'
+   cb ContextBuffer size=1024 vars=119
+   res inputSamp type=3 bind=0 count=1
+   res inputTex type=2 bind=0 count=1
+   res ContextBuffer type=0 bind=8 count=1
+shader_04_0x185850 size=16988 ver=0x00000050 type=ps 5.0 entry='<pre><body bgcolor="#000000"><font color = "#a0a0a0">//'
+   cb ContextBuffer size=1024 vars=119
+   res smpLinearClamp type=3 bind=0 count=1
+   res inputTexture type=2 bind=0 count=1
+   res inputTexture2 type=2 bind=1 count=1
+   res ContextBuffer type=0 bind=8 count=1
+shader_05_0x189AB0 size=23408 ver=0x00000050 type=ps 5.0 entry='<pre><body bgcolor="#000000"><font color = "#a0a0a0">//'
+   cb ContextBuffer size=1024 vars=119
+   res c64fontBuffer type=2 bind=0 count=1
+   res textBuffer1 type=2 bind=1 count=1
+   res textBuffer2 type=2 bind=2 count=1
+   res textBuffer3 type=2 bind=3 count=1
+   res textBuffer4 type=2 bind=4 count=1
+   res textBuffer5 type=2 bind=5 count=1
+   res textBuffer6 type=2 bind=6 count=1
+   res textBuffer7 type=2 bind=7 count=1
+   res textBuffer8 type=2 bind=8 count=1
+   res textBuffer9 type=2 bind=9 count=1
+   res colorpalette type=2 bind=10 count=1
+   res fontBuffer3 type=2 bind=12 count=1
+   res ContextBuffer type=0 bind=8 count=1
+shader_06_0x18F620 size=548 ver=0x00000050 type=ps 5.0 entry='<pre><body bgcolor="#000000"><font color = "#a0a0a0">//'
+shader_07_0x18FBF0 size=184456 ver=0x00000050 type=ps 5.0 entry='<pre><body bgcolor="#000000"><font color = "#a0a0a0">//'
+   cb ContextBuffer size=1024 vars=119
+   res LinearSampler type=3 bind=0 count=1
+   res InputTexture type=2 bind=0 count=1
+   res ContextBuffer type=0 bind=8 count=1
+shader_08_0x39B7C0 size=53284 ver=0x00000050 type=ps 5.0 entry='<pre><body bgcolor="#000000"><font color = "#a0a0a0">//'
+   cb ContextBuffer size=1024 vars=119
+   res samplerState type=3 bind=0 count=1
+   res inputTexture type=2 bind=0 count=1
+   res ContextBuffer type=0 bind=8 count=1
+shader_09_0x3A87F0 size=7372 ver=0x00000050 type=ps 5.0 entry='<pre><body bgcolor="#000000"><font color = "#a0a0a0">//'
+   cb ContextBuffer size=1024 vars=119
+   res inputSamp type=3 bind=0 count=1
+   res inputTex type=2 bind=0 count=1
+   res ContextBuffer type=0 bind=8 count=1
+shader_10_0x3AA4C0 size=184456 ver=0x00000050 type=ps 5.0 entry='<pre><body bgcolor="#000000"><font color = "#a0a0a0">//'
+   cb ContextBuffer size=1024 vars=119
+   res LinearSampler type=3 bind=0 count=1
+   res InputTexture type=2 bind=0 count=1
+   res ContextBuffer type=0 bind=8 count=1
+shader_11_0x3F78F0 size=28208 ver=0x00000050 type=ps 5.0 entry='<pre><body bgcolor="#000000"><font color = "#a0a0a0">//'
+   cb ContextBuffer size=1024 vars=119
+   cb sphereBuffer size=16 vars=1
+   res sphereBuffer type=5 bind=0 count=1
+   res ContextBuffer type=0 bind=8 count=1
+shader_12_0x5AAE20 size=13976 ver=0x00010050 type=vs 5.0 entry='<pre><body bgcolor="#000000"><font color = "#a0a0a0">//'
+   cb ContextBuffer size=1024 vars=119
+   res ContextBuffer type=0 bind=8 count=1
+shader_13_0x5AF460 size=58008 ver=0x00010050 type=vs 5.0 entry='<pre><body bgcolor="#000000"><font color = "#a0a0a0">//'
+   cb ContextBuffer size=1024 vars=119
+   res smpLinearClamp type=3 bind=0 count=1
+   res c64fontBuffer type=2 bind=0 count=1
+   res imageTexture type=2 bind=4 count=1
+   res ContextBuffer type=0 bind=8 count=1
+shader_14_0x75F4A0 size=988 ver=0x00010050 type=vs 5.0 entry='<pre><body bgcolor="#000000"><font color = "#a0a0a0">//'
+shader_15_0x75F880 size=692 ver=0x00000050 type=ps 5.0 entry='<pre><body bgcolor="#000000"><font color = "#a0a0a0">//'
+   res smp type=3 bind=3 count=1
+   res inputTex type=2 bind=0 count=1
+
+XM name='where do I start?   ' tracker='Fasttracker II clone' off=0x738140-0x75F497 len=160599 patterns=16 instruments=65544 channels=20 song_len=20

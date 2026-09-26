@@ -1,0 +1,7 @@
+[package]
+name = "spv2wgsl"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+naga = { version = "=24.0.0", features = ["spv-in", "wgsl-out"] }
