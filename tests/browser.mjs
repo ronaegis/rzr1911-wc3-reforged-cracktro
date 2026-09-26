@@ -51,6 +51,16 @@ try {
   assert.equal(initialSound.offset, 0, 'Start must play music from the beginning');
   assert(initialSound.energy > 1, 'Start must produce non-silent music');
   assert.equal(await page.locator('#sound').textContent(), 'Mute');
+  assert.equal(await page.locator('#controls').isVisible(), false);
+  assert.equal(await page.locator('#status').isVisible(), false);
+  await page.mouse.move(10, 10);
+  assert.equal(await page.locator('#controls').isVisible(), true);
+  assert.equal(await page.locator('#status').isVisible(), true);
+  await page.waitForFunction(() => document.querySelector('#controls').hidden, null, { timeout: 7000 });
+  assert.equal(await page.locator('#status').isVisible(), false);
+  await page.mouse.move(20, 20);
+  assert.equal(await page.locator('#controls').isVisible(), true);
+  assert.equal(await page.locator('#status').isVisible(), true);
   await page.locator('#sound').click();
   await page.evaluate(() => { window.testTime = 0; });
   await page.locator('#replay').click();
@@ -73,6 +83,7 @@ try {
     await page.locator('#status').evaluate((e) => { e.style.visibility = ''; });
   }
   await page.setViewportSize({ width: 480, height: 640 });
+  await page.mouse.move(30, 30);
   assert.deepEqual(await page.locator('canvas').evaluate((canvas) => ({
     width: canvas.width, height: canvas.height,
     displayWidth: canvas.clientWidth, displayHeight: canvas.clientHeight,

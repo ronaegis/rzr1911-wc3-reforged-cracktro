@@ -27,6 +27,9 @@ WebGPU requires localhost or HTTPS. Click **Start demo** to start music and
 visuals together; **Mute** and **Replay** remain available during playback.
 The presentation lasts 67 seconds.
 
+Controls and status text hide when playback starts. Move the mouse to reveal them; they hide
+again after five seconds of inactivity. A touch or Tab key also reveals them.
+
 Choose Low **512×288**, Mid **1024×576** (default), or High **2048×1152**.
 The selected canvas resolution stays fixed while CSS stretches it to fill
 the page. Switching resolution does not restart playback.

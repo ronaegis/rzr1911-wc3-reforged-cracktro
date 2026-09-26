@@ -56,6 +56,7 @@ try {
  await page.goto(process.argv[2] || 'http://127.0.0.1:8080');
  await page.locator('#start').click();
  await page.waitForFunction(()=>document.querySelector('#sound').textContent==='Mute');
+ await page.mouse.move(10, 10);
  await page.locator('#sound').click();
  await page.locator('#replay').click();
  await page.evaluate(()=>{window.testTime=30000;});

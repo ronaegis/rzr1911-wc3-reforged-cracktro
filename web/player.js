@@ -8,6 +8,7 @@ const replayButton = document.querySelector("#replay");
 const startButton = document.querySelector("#start");
 const startScreen = document.querySelector("#start-screen");
 const resolutionSelect = document.querySelector("#resolution");
+const controls = document.querySelector("#controls");
 resolutionSelect.addEventListener("change", () => {
   canvas.width = Number(resolutionSelect.value);
   canvas.height = canvas.width * 9 / 16;
@@ -78,6 +79,26 @@ async function main() {
 
   // Wait for a user gesture, then start both clocks after music is ready.
   let started = false;
+  let controlsTimer;
+  function hideControls() {
+    controls.hidden = true;
+    status.hidden = true;
+  }
+  function revealControls() {
+    if (!started) return;
+    controls.hidden = false;
+    status.hidden = false;
+    clearTimeout(controlsTimer);
+    controlsTimer = setTimeout(hideControls, 5000);
+  }
+  document.addEventListener("mousemove", revealControls);
+  // Keep controls reachable on touchscreens and with keyboard navigation.
+  document.addEventListener("pointerdown", (event) => {
+    if (event.pointerType === "touch") revealControls();
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Tab") revealControls();
+  });
   let epoch = performance.now();
   let audio, audioBuffer, source;
   let audioLoading, audioError = "";
@@ -135,6 +156,7 @@ async function main() {
       startAudio(0);
       started = true;
       startScreen.hidden = true;
+      hideControls();
       soundButton.disabled = false;
       soundButton.textContent = "Mute";
       replayButton.disabled = false;
